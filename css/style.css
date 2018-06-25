@@ -19,45 +19,73 @@ h1 {
 }
 
 /*NOTE need to fix how size of boxes changes to accom text!*/
-.grid {
+ .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100vw; /*vw: hundredths of the viewport width*/
   max-width: 80vh; /* vh: hundredths of the viewport height.*/
   height: 100vw;
   max-height: 80vh;
-  margin: 0 auto;
-  padding: 0;
-  font-size: 100px;
-  /* grid-template-rows: 180px 180px 180px;*/
+  margin: 0;
+
+  grid-template-rows: 180px 180px 180px;*/
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
+  min-height: 1fr 1fr 1fr;
+  min-width: 1fr 1fr 1fr;
 }
 
 .gridBox {
+  font-size: 100px;
+  padding: 0;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
   border: 3px solid white;
-  /* font-size: 80%; */
-  padding: 0;
-  margin: 0;
+  height: 1fr 1fr 1fr;
+  width: 1fr 1fr 1fr;
+  overflow: hidden;
 }
 
-/* this is if you go back to box model */
-/* .box {
-  width: 200px;
-  height: 200px;
-  border: 1px solid black;
-}
 
-.row1 {
+/* //NOTE - trying on box model, doesnt work */
+
+/* .row1 {
   display:inline-flex;
+  border: 3px solid white;
+  min-width: 33%;
+  min-height: 33%;
 }
 .row2 {
   display:inline-flex;
+  border: 3px solid white;
+  min-width: 33%;
+  min-height: 33%;
 }
 .row3 {
   display:inline-flex;
+  border: 3px solid white;
+  min-width: 33%;
+  min-height: 33%;
+} */
+/* .grid {
+
+} */
+/* .gridBox {
+  font-size: 100px;
+  width: 30vw;
+  max-width: 20vh;
+  height: 30vw;
+  max-height: 20vh;
+
+  /* width: 300px;
+  height: 300px; */
+  /* text-align:center; /*this centers text horizontally*/
+  /*line-height: 300px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  /*-moz-box-sizing: border-box;    /* Firefox, other Gecko*/
+/*  box-sizing: border-box;
+  border: 3px solid white;
+  display: inline-block;
 } */

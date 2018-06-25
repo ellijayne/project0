@@ -87,11 +87,13 @@ $(document).ready(function() {
   //   for (let i = 0; i < board.length; i++) {
   //     if (board[i] !== 0 &&
   //   }
+  //
+  //
+  //
   //   ////NOTE TEST THE  BELOW IT NIGHT WORK!
   //   if(board[0] === 'x' && board[1] === 'x' && board[2] === 'x') {
   //       console.log('we have a winner')
   //   };
-  //   if (board[0],[1],[2] !== 0 && board[0],[1],[2] === "x") {
   //
   //     // alert(`${board[0] wins!}`); //saying board 0 here because we assume 0, 1 and 2 are all the same now.
   //   };
