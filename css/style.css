@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Amatic SC', cursive;
+}
+h1 {
+  font-size: 65px;
+  margin-bottom: 7px;
+}
+
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*NOTE need to fix how size of boxes changes to accom text!*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100vw; /*vw: hundredths of the viewport width*/
+  max-width: 80vh; /* vh: hundredths of the viewport height.*/
+  height: 100vw;
+  max-height: 80vh;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 100px;
+  /* grid-template-rows: 180px 180px 180px;*/
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.gridBox {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  border: 3px solid white;
+  /* font-size: 80%; */
+  padding: 0;
+  margin: 0;
+}
+
+/* this is if you go back to box model */
+/* .box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.row1 {
+  display:inline-flex;
+}
+.row2 {
+  display:inline-flex;
+}
+.row3 {
+  display:inline-flex;
+} */
