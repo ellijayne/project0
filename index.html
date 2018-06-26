@@ -33,37 +33,39 @@
         <div class="gridBox" id="6"></div>
         <div class="gridBox" id="7"></div>
         <div class="gridBox" id="8"></div>
-        <!--nesting players and message within main grid-->
-        <!-- <div class="gridBox" id="winnerMessage">
-
-        </div> -->
-        <div class="gridBox" id="players">
+        <!--nesting players  within main grid-->
+    </div> <!--end of grid div-->
+    <div class="lowerGrid">
+        <div class="winnerGrid" id="winnerMessage">
+            We have a winner!
+            </div>
+        <div class="drawGrid" id="drawMessage">
+            It's a draw.
+            </div>
+        <div class="playerGrid" id="players">
             <div class="nestedPlayer1">
               <div class="icon1">
                 <i class="far fa-user"></i>
               </div><!--end of icons div-->
-                Player One: <input class="player1Details" type="text" />
-                <button class="player1Details">let's play!</button>
+              <div id="form1"><button href="#" id="showForm1">Player 1</button></div>
+                <form id="player1form">
+                  <input type="text" id="player1details" placeholder="Player One Name"/>
+                  <input type="submit" id="player1button" value="Add Name"/>
+                </form>
             </div><!--end of player 1 butt div-->
-          <!--end of icons div-->
             <div class="nestedPlayer2">
               <div class="icon2">
                 <i class="far fa-user"></i>
                 <i class="far fa-user"></i>
-              </div>
-                Player Two: <input class="player2Details" type="text" />
-                <button class="player2Details">let's play!</button>
-            </div>
+              </div><!--end of icons div-->
+            <div id="form2"><button href="#" id="showForm2">Player 2</button></div>                             <form id="player2form">
+                  <input type="text" id="player2details" placeholder="Player Two Name"/>
+                  <input type="submit" id="player2button" value="Add Name"/>
+                </form>
         </div> <!--end of players ID div-->
-    <!-- </div>  -->
-    <!--end of row 3 div-->
+      </div> <!--end of lower grid tag-->
 
   </div> <!-- end of board div-->
-
-  <div i="playerGrid">
-
-    <!--end of player 2 butt div-->
-  </div><!--end of player box-->
 
 
 </div> <!--end of container div-->

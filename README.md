@@ -2,6 +2,16 @@
 ## Tic Tac Toe <!--subheading-->
 README coming soon. <!--paragraph-->
 
+CUT FROM BUTTON THING
+<div class="nestedPlayer2">
+  <div class="icon2">
+    <i class="far fa-user"></i>
+    <i class="far fa-user"></i>
+  </div>
+    Player Two: <input class="player2Details" type="text" />
+    <button class="player2button">let's play!</button>
+</div>
+
 HTML
 <!--need to create boxes-->
 <!--need to find images that represent the x and o-->

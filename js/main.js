@@ -111,18 +111,66 @@ $(document).ready(function() {
 
   }); //END of DOCU tag NOW.
   const checkWin = function(player) {
-    if ((board[0] === player && board[1] === player && board[2] === player)||
-    (board[3] === player && board[4] === player && board[5] === player)||
-    (board[6] === player && board[7] === player && board[8] === player)||
-    (board[0] ===player && board[4] === player && board[8] === player)||
-    (board[2] === player && board[4] === player && board[6] === player)||
-    (board[0] === player && board[3] === player && board[6] === player)||
-    (board[1] === player && board[4] === player && board[7] === player)||
-    (board[2] === player && board[4] === player && board[8] === player)) {
-        console.log('we have a winner')
-        return true;
-    };
+  if ((board[0] === player && board[1] === player  && board[2] === player) ||
+  (board[3] === player && board[4] === player && board[5] === player) ||
+  (board[6] === player && board[7] === player && board[8] === player) ||
+  (board[0] ===player && board[4] === player && board[8] === player) ||
+  (board[2] === player && board[4] === player && board[6] === player) ||
+  (board[0] === player && board[3] === player && board[6] === player) ||
+  (board[1] === player && board[4] === player && board[7] === player) ||
+  (board[2] === player && board[4] === player && board[8] === player))
+  $("#winnerMessage").css("opacity", "1");
+      console.log('we have a winner');
 
-  };
+      return true;
+    };
+//ADD NAME OF PLAYER ONE FUNCTION!!!
+$(function() {
+  let $form1 = $("#form1");
+  let $player1form = $("#player1form");
+  // let $nameInput = $("#input:text");
+
+  $form1.show();
+  $player1form.hide();
+
+  $("#showForm1").on("click", function() {
+    $form1.hide;
+    $player1form.show();
+  });
+  $player1form.on('submit', function(e){
+    e.preventDefault();
+    let newText = $("input:text").val();
+    $(".icon1").after('<p>' + newText + '<p>');
+    $player1form.hide();
+  });
+
+}); //end of add name player one function
+//ADD NAME OF PLAYER TWO!!!!!!
+
+$(function() {
+  let $form2 = $("#form2");
+  let $player2form = $("#player2form");
+  let $nameInput = $("#input:text");
+
+  $form2.show();
+  $player2form.hide();
+
+  $("#showForm2").on("click", function() {
+    $form2.hide;
+    $player2form.show();
+  });
+  $player2form.on('submit', function(e){
+    e.preventDefault();
+    let newText = $("#player2details").val();
+    $(".icon2").after('<p>' + newText + '<p>');
+    $player2form.hide();
+  });
+
+}); //end of add name player two function
+
+
+//gets value of input box (class = player2Details) using.val();
+//updates .text() or .html() with user input and replaces() the input box with just the input??? possible?
+
 
       // alert(`${board[0] wins!}`); //saying board 0 here because we assume 0, 1 and 2 are all the same now.
