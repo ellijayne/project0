@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/style.css"rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <script src="js/jquery.js"></script>
   <script src="js/main.js"></script>
   <title>Project 0</title>
@@ -32,11 +33,35 @@
         <div class="gridBox" id="6"></div>
         <div class="gridBox" id="7"></div>
         <div class="gridBox" id="8"></div>
+        <!--nesting players within main grid-->
+        <div class="gridBox" id="players">
+            <div class="nestedPlayer1">
+              <div class="icons">
+                <i id="oneUser" class="far fa-user"></i>
+              </div><!--end of icons div-->
+                Player One: <input class="player1Details" type="text" />
+                <button class="player1Details">let's play!</button>
+            </div><!--end of player 1 butt div-->
+          <!--end of icons div-->
+            <div class="nestedPlayer2">
+              <div class="icons">
+                <i id="twoUsers" class="far fa-user"></i>
+                <i id="twoUsers" class="far fa-user"></i>
+              </div>
+                Player Two: <input class="player2Details" type="text" />
+                <button class="player2Details">let's play!</button>
+            </div>
+        </div> <!--end of players ID div-->
     <!-- </div>  -->
     <!--end of row 3 div-->
 
   </div> <!-- end of board div-->
-<!--use javascript to update the class on this so it either says X or O's turn????-->
+
+  <div i="playerGrid">
+
+    <!--end of player 2 butt div-->
+  </div><!--end of player box-->
+
 
 </div> <!--end of container div-->
 

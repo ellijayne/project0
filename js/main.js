@@ -6,6 +6,7 @@ const board = ["", "", "",
               "", "", ""];
 
 let nextPlayerX = true;
+let turnsPlayed = 0;
 
 
 const xPlay = function(index) {
@@ -24,10 +25,17 @@ const playTurn = function(index) {
   }
   if (nextPlayerX === true ) {
     xPlay(index);
+    turnsPlayed = turnsPlayed + 1;
     nextPlayerX = false;
-  } else{
+    checkWin("x");
+    if(turnsPlayed === 9 && (checkWin('x') !== true)) {
+      console.log("It's a draw!")
+    }
+  } else {
     oPlay(index);
+    turnsPlayed = turnsPlayed + 1;
     nextPlayerX = true;
+    checkWin("o");
 
     //check to see if box empty if box empty can go.....
   };
@@ -82,22 +90,26 @@ $(document).ready(function() {
   });
 
   //check for win - eight combos to check - if else to check indexes against what is current in them to check for the win. starts with checking the first row with the check for win function... is 1, 2, 3 the same?
-  // let checkWin = function(row) {
-  //   //saying if all spaces in row 1 (or 0, 1, 2 indexes) have a value of 1 check if they're all x or o.
-  //   for (let i = 0; i < board.length; i++) {
-  //     if (board[i] !== 0 &&
-  //   }
-  //
-  //
-  //
-  //   ////NOTE TEST THE  BELOW IT NIGHT WORK!
-  //   if(board[0] === 'x' && board[1] === 'x' && board[2] === 'x') {
-  //       console.log('we have a winner')
-  //   };
-  //
-  //     // alert(`${board[0] wins!}`); //saying board 0 here because we assume 0, 1 and 2 are all the same now.
-  //   };
-  //   checkWin(row);
-  // };
+  //saying if all spaces in row 1 (or 0, 1, 2 indexes) have a value of 1 check if they're all x or o.
+  // for (let i = 0; i < board.length; i++) {
+  //   if (board[i] !== 0 &&
+  // }
+  //  for (let i = 0; i < board.length; i++) {
 
-}); //END of DOCU tag NOW.
+  }); //END of DOCU tag NOW.
+  const checkWin = function(player) {
+    if ((board[0] === player && board[1] === player && board[2] === player)||
+    (board[3] === player && board[4] === player && board[5] === player)||
+    (board[6] === player && board[7] === player && board[8] === player)||
+    (board[0] ===player && board[4] === player && board[8] === player)||
+    (board[2] === player && board[4] === player && board[6] === player)||
+    (board[0] === player && board[3] === player && board[6] === player)||
+    (board[1] === player && board[4] === player && board[7] === player)||
+    (board[2] === player && board[4] === player && board[8] === player)) {
+        console.log('we have a winner')
+        return true;
+    };
+
+  };
+
+      // alert(`${board[0] wins!}`); //saying board 0 here because we assume 0, 1 and 2 are all the same now.
