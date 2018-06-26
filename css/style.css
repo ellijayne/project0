@@ -59,14 +59,14 @@ h1 {
     grid-row-end: 4;
    display: grid;
    grid-template-columns: repeat(2, 0.9fr);
-    border: 1px solid white;
+    border: 3px solid black;
     font-size: 3vh;
     grid-template-rows: 16vh; /*this moves the player icons up closer to the end of the board grid*/
 }
 
 .playerInPlay { /*this is for when a player is in play and you use JS to addClass to this and them remove when it's the next persons turn*/
-  color: teal;
-  text-shadow: 0 0 30px #FFCEC9;
+  color: #07B9C7;
+  text-shadow: 4px 2px 9px #FFF2BB;
 }
 
 /*.player1Details { /*this is to make the text box hide and then come into view after JS click event
@@ -76,7 +76,21 @@ h1 {
 /*.player2Details {
   opacity: 0;
 }*/
-.icons {
+.icon1 {
   color: white;
   font-size: 30px;
+}
+.icon2 {
+  color: white;
+  font-size: 30px;
+}
+
+#oneUser {
+  color: #07B9C7;
+  text-shadow: 4px 2px 9px #FFF2BB;
+}
+
+#twoUsers {
+  color: #07B9C7;
+  text-shadow: 4px 2px 9px #FFF2BB;
 }

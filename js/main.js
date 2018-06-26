@@ -9,12 +9,17 @@ let nextPlayerX = true;
 let turnsPlayed = 0;
 
 
+
 const xPlay = function(index) {
   board[index] = "x"; //here we are setting the value of board at position index to be X
+  // $(".nestedPlayer1").removeClass("playerInPlay");
+  // $(".nestedPlayer2").addClass("playerInPlay");
 };
 
 const oPlay = function(index) {
   board[index] = "o";
+  // $(".nestedPlayer2").removeClass("playerInPlay");
+  // $(".nestedPlayer1").addClass("playerInPlay");
 };
 
 // $(document).ready(function() {
@@ -24,6 +29,10 @@ const playTurn = function(index) {
     return
   }
   if (nextPlayerX === true ) {
+    $(".nestedPlayer1").removeClass("playerInPlay");
+    $(".nestedPlayer2").addClass("playerInPlay");
+    $(".icon1").removeAttr("id", "oneUser");
+    $(".icon2").attr("id", "twoUsers");
     xPlay(index);
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = false;
@@ -33,6 +42,10 @@ const playTurn = function(index) {
     }
   } else {
     oPlay(index);
+    $(".nestedPlayer2").removeClass("playerInPlay");
+    $(".nestedPlayer1").addClass("playerInPlay");
+    $(".icon2").removeAttr("id", "twoUsers");
+    $(".icon1").attr("id", "oneUser");
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = true;
     checkWin("o");
