@@ -65,7 +65,7 @@ h1 {
 
 }
 
-.aniWinner {
+.aniWinner, .aniDraw {
   display: grid;
   align-items: center;
   grid-template-columns: 1;
@@ -78,32 +78,18 @@ h1 {
   width: 70vh;
   height: 70vh;
   margin: 0;
-  border: 3px solid green;
 }
 
-.aniWinner p {
+.aniWinner p, .aniDraw p {
   opacity: 0.9;
-  font-size: 25vh;
+  font-size: 18vh;
   background-color: #07B9C7;
   margin: 0;
   padding: 0;
 }
 
-#winnerMessage p {
-  text-align: center;
-  max-height: 5.2vh;
-  font-size: 4vh;
-  display: grid;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  color:#07B9C7;
-  padding: 0;
-  margin: 0 auto;
-}
 
-#drawMessage p {
+/* #winnerMessage p {
   text-align: center;
   max-height: 5.2vh;
   font-size: 4vh;
@@ -115,7 +101,21 @@ h1 {
   color:#07B9C7;
   padding: 0;
   margin: 0 auto;
-}
+} */
+
+/* #drawMessage p {
+  text-align: center;
+  max-height: 5.2vh;
+  font-size: 4vh;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  color:#07B9C7;
+  padding: 0;
+  margin: 0 auto;
+} */
 
 #resetBoard { /*styling for the grid containng message and button*/
   display: grid;
@@ -134,13 +134,13 @@ h1 {
 
 }
 
-.btn { /* styling for the actual button*/
+.resetty { /* styling for the actual button*/
   font-size: 3vh;
+  border: 2px solid red;
   border-radius: 10px;
   /* height: 2.5vh; */
   background: transparent;
-  color: #07B9C7;
-  border: #07B9C7;
+  color: white;
   font-family: 'Amatic SC', cursive;
 
 }

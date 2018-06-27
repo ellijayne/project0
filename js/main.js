@@ -20,15 +20,19 @@ const oPlay = function(index) {
 
 $(document).ready(function() {
 
-$("#resetBoard").on("click", function() {
+$(".resetty").on("click", function() {
+  console.log('resetting board');
   board = ["", "", "",
                 "", "", "",
                 "", "", ""];
   turnsPlayed = 0;
   $('.gridBox').text('');
-  $("#winnerMessage").hide();
+  // $("#winnerMessage").hide();
   $(".aniWinner").hide();
-  $("resetBoard").hide();
+  $(".aniDraw").hide()
+  $("#resetBoard").hide();
+  $(".nestedPlayer1").removeClass("playerInPlay");
+  $(".nestedPlayer2").removeClass("playerInPlay");
   nextPlayerX = true;
 
   });
@@ -47,9 +51,11 @@ const playTurn = function(index) {
     nextPlayerX = false;
     // checkWin("x"); //calling this below so no longer need to here.
     if(turnsPlayed === 9 && (checkWin('x') !== true)) {
-      $("#drawMessage").show();
+      $(".aniDraw").slideDown(700);
+
       $(".nestedPlayer1").addClass("playerInPlay");
       $(".nestedPlayer2").addClass("playerInPlay");
+
     }
   } else {
     oPlay(index);
@@ -79,9 +85,9 @@ for (let i = 0; i < board.length; i++) { //looping through board ARRAY
 showMove();
 
 // $(document).ready(function() {
-  $("#winnerMessage").hide();
+  // $("#winnerMessage").hide();
   $(".aniWinner").hide();
-  $("#drawMessage").hide();
+  $(".aniDraw").hide();
   //making the squares clickable!
   $("#0").on("click", function() {
     console.log($("#0"));
@@ -131,12 +137,10 @@ showMove();
   (board[0] === player && board[3] === player && board[6] === player) ||
   (board[1] === player && board[4] === player && board[7] === player) ||
   (board[2] === player && board[4] === player && board[8] === player)) {
-    $("#winnerMessage").show();
-    $(".aniWinner").show();
-    // const animateWin = function(winnerMessage){
-    //   if ($("#winnerMessage").show()) {
-    //     $(this).animate({font-size: "100px"}, 500);
-    //   } //trying to animate winner message.
+    // $("#winnerMessage").show();
+    $(".aniWinner").slideDown(700);
+
+
 
         console.log('we have a winner');
 
