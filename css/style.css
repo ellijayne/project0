@@ -61,7 +61,7 @@ h1 {
   grid-template-columns: repeat(3, 0.9fr);
   grid-template-rows: 2;
   align-items: center;
-  border: 1px solid white;
+  
 }
 
 #winnerMessage p {

@@ -1,7 +1,7 @@
 
 //NOTE could do start button when page first loads and when you click start the stuar button goes away and the grid for the game animates into view.
 
-const board = ["", "", "",
+let board = ["", "", "",
               "", "", "",
               "", "", ""];
 
@@ -104,6 +104,11 @@ showMove();
   $("#8").on("click", function() {
     console.log($("#8"));
     playTurn(8);
+  });
+
+  $("#resetBoard").on("click", function() {
+     $('.gridBox').text('');
+
   });
 
 }); //END of document function tag NOW.
