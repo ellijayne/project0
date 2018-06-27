@@ -20,6 +20,18 @@ const oPlay = function(index) {
 
 $(document).ready(function() {
 
+$("#resetBoard").on("click", function() {
+  board = ["", "", "",
+                "", "", "",
+                "", "", ""];
+  turnsPlayed = 0;
+  $('.gridBox').text('');
+  $("#winnerMessage").hide();
+  $("resetBoard").hide();
+  nextPlayerX = true;
+
+  });
+
 const playTurn = function(index) {
   // debugger; //type debugger whenever you want to see it all in the browers step by step....
   if (board[index].length !== 0 || checkWin("o") || checkWin('x')) {
@@ -104,11 +116,6 @@ showMove();
   $("#8").on("click", function() {
     console.log($("#8"));
     playTurn(8);
-  });
-
-  $("#resetBoard").on("click", function() {
-     $('.gridBox').text('');
-
   });
 
 }); //END of document function tag NOW.
