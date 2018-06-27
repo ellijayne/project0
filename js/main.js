@@ -52,6 +52,7 @@ const playTurn = function(index) {
     // checkWin("x"); //calling this below so no longer need to here.
     if(turnsPlayed === 9 && (checkWin('x') !== true)) {
       $(".aniDraw").slideDown(700);
+      $("#resetBoard").show();
 
       $(".nestedPlayer1").addClass("playerInPlay");
       $(".nestedPlayer2").addClass("playerInPlay");
@@ -139,6 +140,7 @@ showMove();
   (board[2] === player && board[4] === player && board[8] === player)) {
     // $("#winnerMessage").show();
     $(".aniWinner").slideDown(700);
+    $("#resetBoard").show();
 
 
 
