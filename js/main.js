@@ -118,6 +118,10 @@ showMove();
   (board[1] === player && board[4] === player && board[7] === player) ||
   (board[2] === player && board[4] === player && board[8] === player)) {
     $("#winnerMessage").show();
+    // const animateWin = function(winnerMessage){
+    //   if ($("#winnerMessage").show()) {
+    //     $(this).animate({font-size: "100px"}, 500);
+    //   } //trying to animate winner message.
 
         console.log('we have a winner');
 

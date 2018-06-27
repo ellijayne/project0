@@ -32,7 +32,6 @@ h1 {
   width: 70vh; /*vw: hundredths of the viewport height*/
   height: 70vh;
   margin: 0 auto; /*this stops the boxes on the grid from expanding when text is input*/
-
   grid-auto-rows: 23.3vh; /* 160px;*/ /*stopping the expansion*/
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -53,39 +52,79 @@ h1 {
   padding-bottom: 0;
 }
 
-/* .oWinnerMessage {
-  color: #07B9C7;
-  font-size: 4vh;
-  /* opacity: 0; */
-/* }
-.xWinnerMessage {
-  color: #07B9C7;
-  font-size: 4vh;
-  opacity: 0;
-} */
-#winnerMessage {
-  max-height: 5.2vh;
-  font-size: 4vh;
+.lowerGrid .winnerGrid {
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
   display: grid;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 4;
-  grid-row-end: 4;
-  /* opacity: 0; */
-  color:#07B9C7;
+  width: 70vw;
+  grid-template-columns: repeat(3, 0.9fr);
+  grid-template-rows: 2;
+  align-items: center;
+  border: 1px solid white;
 }
 
-#drawMessage {
+#winnerMessage p {
+  text-align: center;
   max-height: 5.2vh;
   font-size: 4vh;
   display: grid;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 4;
-  grid-row-end: 4;
-  /* opacity: 0; */
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
   color:#07B9C7;
+  padding: 0;
+  margin: 0 auto;
 }
+
+#drawMessage p {
+  text-align: center;
+  max-height: 5.2vh;
+  font-size: 4vh;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  color:#07B9C7;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#resetBoard { /*styling for the grid containng message and button*/
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-start: 2;
+  border: 1px solid white;
+   grid-template-columns: 1, 0.9fr;
+   grid-template-rows: 16vh;
+   width: 13vh;
+   height: 5vh;
+   margin: 0 auto;
+   padding: 0;
+   grid-auto-rows: 23.3vh;
+
+}
+
+.btn { /* styling for the actual button*/
+  font-size: 3vh;
+  border-radius: 10px;
+  /* height: 2.5vh; */
+  background: transparent;
+  color: #07B9C7;
+  border: #07B9C7;
+  font-family: 'Amatic SC', cursive;
+
+}
+
+.btn:hover {
+  background: white;
+  transition: 0.5s;
+}
+
 
 #players {
    display: grid;
