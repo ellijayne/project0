@@ -27,6 +27,7 @@ $("#resetBoard").on("click", function() {
   turnsPlayed = 0;
   $('.gridBox').text('');
   $("#winnerMessage").hide();
+  $(".aniWinner").hide();
   $("resetBoard").hide();
   nextPlayerX = true;
 
@@ -79,6 +80,7 @@ showMove();
 
 // $(document).ready(function() {
   $("#winnerMessage").hide();
+  $(".aniWinner").hide();
   $("#drawMessage").hide();
   //making the squares clickable!
   $("#0").on("click", function() {
@@ -130,6 +132,7 @@ showMove();
   (board[1] === player && board[4] === player && board[7] === player) ||
   (board[2] === player && board[4] === player && board[8] === player)) {
     $("#winnerMessage").show();
+    $(".aniWinner").show();
     // const animateWin = function(winnerMessage){
     //   if ($("#winnerMessage").show()) {
     //     $(this).animate({font-size: "100px"}, 500);

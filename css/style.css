@@ -26,30 +26,6 @@ h1 {
   text-align: center;
 }
 
- /* .outterGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 3;
-  width: 70vh; /*vw: hundredths of the viewport height*/
-  /* height: 70vh;
-  margin: 0 auto; /*this stops the boxes on the grid from expanding when text is input*/
-  /* grid-auto-rows: 23.3vh; /* 160px;*/ /*stopping the expansion*/
-  /* -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-bottom: 0;
-  border: 1px solid white;
-} */
-
-/* #p1side {
-  color: white;
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-} */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -87,6 +63,30 @@ h1 {
   grid-template-rows: 2;
   align-items: center;
 
+}
+
+.aniWinner {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1;
+  grid-template-rows: 3;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position:absolute;
+  z-index: 1;
+  width: 70vh;
+  height: 70vh;
+  margin: 0;
+  border: 3px solid green;
+}
+
+.aniWinner p {
+  opacity: 0.9;
+  font-size: 25vh;
+  background-color: #07B9C7;
+  margin: 0;
+  padding: 0;
 }
 
 #winnerMessage p {
