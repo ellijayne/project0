@@ -2,6 +2,8 @@
   border: 1px solid green;
 } */
 
+/*@media screen (max-wdith:) this will help with resizing the screen, look into it */
+
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 body {
@@ -69,9 +71,22 @@ h1 {
   grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 4;
-  opacity: 0;
+  /* opacity: 0; */
   color:#07B9C7;
 }
+
+#drawMessage {
+  max-height: 5.2vh;
+  font-size: 4vh;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  /* opacity: 0; */
+  color:#07B9C7;
+}
+
 #players {
    display: grid;
    grid-template-columns: repeat(2, 0.9fr);
@@ -90,18 +105,13 @@ h1 {
 #form2 {
   color: white;
 }
-.playerInPlay { /*this is for when a player is in play and you use JS to addClass to this and them remove when it's the next persons turn*/
+.playerInPlay,
+.playerInPlay .icon1,
+.playerInPlay .icon2 {
   color: #07B9C7;
   text-shadow: 4px 2px 9px #FFF2BB;
 }
 
-/*.player1Details { /*this is to make the text box hide and then come into view after JS click event
-  opacity: 0;
-}*/
-
-/*.player2Details {
-  opacity: 0;
-}*/
 .icon1 {
   color: white;
   font-size: 30px;

@@ -12,58 +12,62 @@ let turnsPlayed = 0;
 
 const xPlay = function(index) {
   board[index] = "x"; //here we are setting the value of board at position index to be X
-  // $(".nestedPlayer1").removeClass("playerInPlay");
-  // $(".nestedPlayer2").addClass("playerInPlay");
 };
 
 const oPlay = function(index) {
   board[index] = "o";
-  // $(".nestedPlayer2").removeClass("playerInPlay");
-  // $(".nestedPlayer1").addClass("playerInPlay");
 };
 
-// $(document).ready(function() {
-//need something that flpis back and forward between player X and player O.....
+$(document).ready(function() {
+
 const playTurn = function(index) {
-  if (board[index].length !== 0) { //here if the length is NOT 0 it will return and we can't put another x or o in there now.
+  // debugger; //type debugger whenever you want to see it all in the browers step by step....
+  if (board[index].length !== 0 || checkWin("o") || checkWin('x')) {
+     console.log("game over"); //here if the length is NOT 0 it will return and we can't put another x or o in there now.
     return
-  }
+  };
   if (nextPlayerX === true ) {
     $(".nestedPlayer1").removeClass("playerInPlay");
     $(".nestedPlayer2").addClass("playerInPlay");
-    $(".icon1").removeAttr("id", "oneUser");
-    $(".icon2").attr("id", "twoUsers");
     xPlay(index);
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = false;
-    checkWin("x");
+    // checkWin("x"); //calling this below so no longer need to here.
     if(turnsPlayed === 9 && (checkWin('x') !== true)) {
-      console.log("It's a draw!")
+      $("#drawMessage").show();
+      $(".nestedPlayer1").addClass("playerInPlay");
+      $(".nestedPlayer2").addClass("playerInPlay");
     }
   } else {
     oPlay(index);
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
-    $(".icon2").removeAttr("id", "twoUsers");
-    $(".icon1").attr("id", "oneUser");
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = true;
-    checkWin("o");
 
-    //check to see if box empty if box empty can go.....
-  };
+     // checkWin("o"); //calling this below so no longer need to here.
+  }
+
   showMove();
+
+  if (checkWin("o") || checkWin("x")) { //calling the function here so no longer need to call it above
+    $('.nestedPlayer1, .nestedPlayer2').toggleClass('playerInPlay');
+    // console.log('toggle');
+  };
+
 };
 
 //render function to take everything in board and put them onto the screen. sending them through to the grid...............
 const showMove = function() {
 for (let i = 0; i < board.length; i++) { //looping through board ARRAY
   $("#" + i).text(board[i]); //updating board class with results stored in LOOP.
-}
+  }
 };
 showMove();
 
-$(document).ready(function() {
+// $(document).ready(function() {
+  $("#winnerMessage").hide();
+  $("#drawMessage").hide();
   //making the squares clickable!
   $("#0").on("click", function() {
     console.log($("#0"));
@@ -102,15 +106,9 @@ $(document).ready(function() {
     playTurn(8);
   });
 
-  //check for win - eight combos to check - if else to check indexes against what is current in them to check for the win. starts with checking the first row with the check for win function... is 1, 2, 3 the same?
-  //saying if all spaces in row 1 (or 0, 1, 2 indexes) have a value of 1 check if they're all x or o.
-  // for (let i = 0; i < board.length; i++) {
-  //   if (board[i] !== 0 &&
-  // }
-  //  for (let i = 0; i < board.length; i++) {
-
-  }); //END of DOCU tag NOW.
+}); //END of document function tag NOW.
   const checkWin = function(player) {
+
   if ((board[0] === player && board[1] === player  && board[2] === player) ||
   (board[3] === player && board[4] === player && board[5] === player) ||
   (board[6] === player && board[7] === player && board[8] === player) ||
@@ -118,12 +116,16 @@ $(document).ready(function() {
   (board[2] === player && board[4] === player && board[6] === player) ||
   (board[0] === player && board[3] === player && board[6] === player) ||
   (board[1] === player && board[4] === player && board[7] === player) ||
-  (board[2] === player && board[4] === player && board[8] === player))
-  $("#winnerMessage").css("opacity", "1");
-      console.log('we have a winner');
+  (board[2] === player && board[4] === player && board[8] === player)) {
+    $("#winnerMessage").show();
 
-      return true;
+        console.log('we have a winner');
+
+        return true;
+  }
+
     };
+
 //ADD NAME OF PLAYER ONE FUNCTION!!!
 $(function() {
   let $form1 = $("#form1");
@@ -142,6 +144,9 @@ $(function() {
     let newText = $("input:text").val();
     $(".icon1").after('<p>' + newText + '<p>');
     $player1form.hide();
+    $(".nestedPlayer2").removeClass("playerInPlay");
+    $(".nestedPlayer1").addClass("playerInPlay");
+
   });
 
 }); //end of add name player one function
@@ -167,10 +172,3 @@ $(function() {
   });
 
 }); //end of add name player two function
-
-
-//gets value of input box (class = player2Details) using.val();
-//updates .text() or .html() with user input and replaces() the input box with just the input??? possible?
-
-
-      // alert(`${board[0] wins!}`); //saying board 0 here because we assume 0, 1 and 2 are all the same now.
