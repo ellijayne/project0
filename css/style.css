@@ -19,8 +19,8 @@ body {
 }
 
 h1 {
-  font-size: 65px;
-  margin-bottom: 7px;
+  font-size: 10.2vw;
+  margin-bottom: -5px;
   margin-top: 0;
   color: #F1FDFF;
   text-shadow: 6px 3px 9px #00FFFF;
@@ -36,7 +36,6 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 3;
-
   width: 70vh; /*vw: hundredths of the viewport height*/
   height: 70vh;
   margin: 0 auto; /*this stops the boxes on the grid from expanding when text is input*/
@@ -51,11 +50,13 @@ h1 {
   align-items: center;
   margin: 0; /*this seems to keep all boxes inthe middle of the screen??*/
   font-size: 15vh;
+  text-shadow: 6px 3px 9px #00FFFF;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 3px solid white;
+  border-style: double;
   overflow: hidden;
   padding-bottom: 0;
 }
@@ -78,7 +79,13 @@ h1 {
 .aniWinner p, .aniDraw p {
   opacity: 0.98;
   font-size: 10vh;
-  background-color: #343A40;
+  background-color: #1E2422;
+  /* color: #F1FDFF; */
+  /* text-shadow: 6px 3px 9px #D131FF; */
+  background: linear-gradient(270deg, #7ad8c0, #7ad1d8, #7abcd8, #7a7ed8, #b07ad8, #e79fdc);
+  -webkit-animation: AnimationName 27s ease infinite;
+-moz-animation: AnimationName 27s ease infinite;
+animation: AnimationName 27s ease infinite;
   margin: 0;
   padding: 0;
 }
@@ -103,12 +110,13 @@ h1 {
   font-size: 3vh;
   border: 2px solid white;
   border-radius: 10px;
-  height: 4.5vh;
+  height: 5vh;
   padding: 0.6em;
   background: transparent;
   color: white;
   font-family: 'Monoton', cursive;
   font-weight: 100;
+
 
 }
 
@@ -180,10 +188,10 @@ button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 3;
-    width: 70vw;
-    height: 70vw;
+    width: 65vw;
+    height: 65vw;
     margin: 0 auto;
-    grid-auto-rows: 23.3vw;
+    grid-auto-rows: 21.3vw;
     padding-bottom: 0;
 }
 .gridBox {
@@ -201,7 +209,7 @@ button {
     border: 3px solid black;
     font-size: 3vw;
     grid-template-rows: 16vh;
-    width: 80vw;
+    width: 75vw;
     height: 13vw;
     margin: 0 auto;
     grid-auto-rows: 23.3vw;
@@ -216,16 +224,26 @@ button {
   grid-row-end: 2;
   position:absolute;
   z-index: 1;
-  width: 70vw;
-  height: 70vw;
+  width: 65vw;
+  height: 65vw;
   margin: 0;
 }
 
 .aniWinner p, .aniDraw p {
   opacity: 0.9;
-  font-size: 18vw;
+  font-size: 15vw;
   background-color: #07B9C7;
   margin: 0;
   padding: 0;
+}
+h1 {
+    font-size: 7vh;
+    margin-bottom: 7px;
+    margin-top: 0;
+    color: #F1FDFF;
+    text-shadow: 6px 3px 9px #00FFFF;
+  }
+
+
 }
 }
