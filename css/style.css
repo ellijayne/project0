@@ -121,7 +121,8 @@ animation: AnimationName 27s ease infinite;
 }
 
 .resetty:hover {
-  background: grey;
+  background: white;
+  color: #7ad1d8;
   transition: 0.5s;
 }
 
@@ -158,6 +159,12 @@ animation: AnimationName 27s ease infinite;
 .icon2 {
   color: white;
   font-size: 30px;
+}
+
+#showForm1:hover, #showForm2:hover {
+  background: white;
+  color: #7ad1d8;
+  transition: 0.5s;
 }
 
 /* #oneUser {

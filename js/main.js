@@ -92,7 +92,7 @@ showMove();
   //making the squares clickable!
   $("#0").on("click", function() {
     console.log($("#0"));
-    playTurn(0)
+    playTurn("0")
   });
   $("#1").on("click", function() {
     console.log($("#1"));
