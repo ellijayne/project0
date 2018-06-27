@@ -53,18 +53,6 @@ h1 {
   padding-bottom: 0;
 }
 
-.lowerGrid .winnerGrid {
-  align-items: center;
-  padding: 0;
-  margin: 0 auto;
-  display: grid;
-  width: 70vw;
-  grid-template-columns: repeat(3, 0.9fr);
-  grid-template-rows: 2;
-  align-items: center;
-
-}
-
 .aniWinner, .aniDraw {
   display: grid;
   align-items: center;
@@ -87,35 +75,6 @@ h1 {
   margin: 0;
   padding: 0;
 }
-
-
-/* #winnerMessage p {
-  text-align: center;
-  max-height: 5.2vh;
-  font-size: 4vh;
-  display: grid;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  color:#07B9C7;
-  padding: 0;
-  margin: 0 auto;
-} */
-
-/* #drawMessage p {
-  text-align: center;
-  max-height: 5.2vh;
-  font-size: 4vh;
-  display: grid;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  color:#07B9C7;
-  padding: 0;
-  margin: 0 auto;
-} */
 
 #resetBoard { /*styling for the grid containng message and button*/
   display: grid;
@@ -145,8 +104,8 @@ h1 {
 
 }
 
-.btn:hover {
-  background: white;
+.resetty:hover {
+  background: grey;
   transition: 0.5s;
 }
 
@@ -193,4 +152,61 @@ h1 {
 #twoUsers {
   color: #07B9C7;
   text-shadow: 4px 2px 9px #FFF2BB;
+}
+
+/*ALL MEDIA STUFF!!!!!!!!*/
+
+@media (max-width: 500px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3;
+    width: 70vw;
+    height: 70vw;
+    margin: 0 auto;
+    grid-auto-rows: 23.3vw;
+    padding-bottom: 0;
+}
+.gridBox {
+  align-items: center;
+  margin: 0; /*this seems to keep all boxes inthe middle of the screen??*/
+  font-size: 15vw;
+  padding: 0;
+  border: 3px solid white;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+#players {
+   display: grid;
+   grid-template-columns: repeat(2, 0.9fr);
+    border: 3px solid black;
+    font-size: 3vw;
+    grid-template-rows: 16vh;
+    width: 80vw;
+    height: 13vw;
+    margin: 0 auto;
+    grid-auto-rows: 23.3vw;
+}
+.aniWinner, .aniDraw {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1;
+  grid-template-rows: 3;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position:absolute;
+  z-index: 1;
+  width: 70vw;
+  height: 70vw;
+  margin: 0;
+}
+
+.aniWinner p, .aniDraw p {
+  opacity: 0.9;
+  font-size: 18vw;
+  background-color: #07B9C7;
+  margin: 0;
+  padding: 0;
+}
 }
