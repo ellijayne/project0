@@ -4,20 +4,26 @@
 
 /*@media screen (max-wdith:) this will help with resizing the screen, look into it */
 
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+/* @import url('https://fonts.googleapis.com/css?family=Amatic+SC'); */ /*hand written original font, font fam should be 'Amatic SC', cursive; */
+
+/* @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One'); */ /*this is GLOW one */
+
+@import url('https://fonts.googleapis.com/css?family=Monoton');
 
 body {
   padding: 0;
   margin: 0;
   background-color: black;
   color: white;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Monoton', cursive;
 }
 
 h1 {
   font-size: 65px;
   margin-bottom: 7px;
   margin-top: 0;
+  color: #F1FDFF;
+  text-shadow: 6px 3px 9px #00FFFF;
 }
 
 #container {
@@ -30,6 +36,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 3;
+
   width: 70vh; /*vw: hundredths of the viewport height*/
   height: 70vh;
   margin: 0 auto; /*this stops the boxes on the grid from expanding when text is input*/
@@ -62,16 +69,16 @@ h1 {
   grid-row-start: 2;
   grid-row-end: 2;
   position:absolute;
-  z-index: 1;
+  z-index: 2;
   width: 70vh;
   height: 70vh;
   margin: 0;
 }
 
 .aniWinner p, .aniDraw p {
-  opacity: 0.9;
-  font-size: 18vh;
-  background-color: #07B9C7;
+  opacity: 0.98;
+  font-size: 10vh;
+  background-color: #343A40;
   margin: 0;
   padding: 0;
 }
@@ -82,25 +89,26 @@ h1 {
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-start: 2;
-  border: 1px solid white;
-   grid-template-columns: 1, 0.9fr;
+
+   /* grid-template-columns: 1, 0.9fr;
    grid-template-rows: 16vh;
    width: 13vh;
-   height: 5vh;
+   height: 5vh;*/
    margin: 0 auto;
    padding: 0;
    grid-auto-rows: 23.3vh;
-
 }
 
 .resetty { /* styling for the actual button*/
   font-size: 3vh;
-  border: 2px solid red;
+  border: 2px solid white;
   border-radius: 10px;
-  /* height: 2.5vh; */
+  height: 4.5vh;
+  padding: 0.6em;
   background: transparent;
   color: white;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Monoton', cursive;
+  font-weight: 100;
 
 }
 
@@ -109,12 +117,12 @@ h1 {
   transition: 0.5s;
 }
 
-
 #players {
    display: grid;
    grid-template-columns: repeat(2, 0.9fr);
     border: 3px solid black;
     font-size: 3vh;
+    font-weight: lighter;
     grid-template-rows: 16vh;
     width: 70vh;
     height: 13vh;
@@ -131,8 +139,8 @@ h1 {
 .playerInPlay,
 .playerInPlay .icon1,
 .playerInPlay .icon2 {
-  color: #07B9C7;
-  text-shadow: 4px 2px 9px #FFF2BB;
+  color: #;
+  text-shadow: 6px 3px 9px #00FFFF;
 }
 
 .icon1 {
@@ -144,7 +152,7 @@ h1 {
   font-size: 30px;
 }
 
-#oneUser {
+/* #oneUser {
   color: #07B9C7;
   text-shadow: 4px 2px 9px #FFF2BB;
 }
@@ -152,7 +160,18 @@ h1 {
 #twoUsers {
   color: #07B9C7;
   text-shadow: 4px 2px 9px #FFF2BB;
+} */
+
+button {
+  font-size: 3vh;
+  border: 2px solid white;
+  border-radius: 10px;
+  /* height: 2.5vh; */
+  background: transparent;
+  color: white;
+  font-family: 'Monoton', cursive;
 }
+
 
 /*ALL MEDIA STUFF!!!!!!!!*/
 

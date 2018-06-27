@@ -137,7 +137,7 @@ showMove();
   (board[2] === player && board[4] === player && board[6] === player) ||
   (board[0] === player && board[3] === player && board[6] === player) ||
   (board[1] === player && board[4] === player && board[7] === player) ||
-  (board[2] === player && board[4] === player && board[8] === player)) {
+  (board[2] === player && board[5] === player && board[8] === player)) {
     // $("#winnerMessage").show();
     $(".aniWinner").slideDown(700);
     $("#resetBoard").show();
@@ -161,7 +161,7 @@ $(function() {
   $player1form.hide();
 
   $("#showForm1").on("click", function() {
-    $form1.hide;
+    $form1.hide();
     $player1form.show();
   });
   $player1form.on('submit', function(e){
@@ -169,6 +169,7 @@ $(function() {
     let newText = $("input:text").val();
     $(".icon1").after('<p>' + newText + '<p>');
     $player1form.hide();
+    // $("#showForm1").hide();
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
 
@@ -186,7 +187,7 @@ $(function() {
   $player2form.hide();
 
   $("#showForm2").on("click", function() {
-    $form2.hide;
+    $form2.hide();
     $player2form.show();
   });
   $player2form.on('submit', function(e){
