@@ -59,9 +59,9 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 3;
   width: 70vh; /*vw: hundredths of the viewport height*/
-  height: 70vh;
+  height: 68vh;
   margin: 0 auto; /*this stops the boxes on the grid from expanding when text is input*/
-  grid-auto-rows: 23.3vh; /* 160px;*/ /*stopping the expansion*/
+  grid-auto-rows: 21.3vh; /* 160px;*/ /*stopping the expansion*/
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -71,7 +71,7 @@ h1 {
 .gridBox {
   align-items: center;
   margin: 0; /*this seems to keep all boxes inthe middle of the screen??*/
-  font-size: 15vh;
+  font-size: 13vh;
   text-shadow: 6px 3px 9px #00FFFF;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -90,6 +90,7 @@ h1 {
 }
 
 .upperP1 {
+  font-size: 1.5em;
   z-index: 10;
   position: absolute;
   top: 43vh;
@@ -98,6 +99,7 @@ h1 {
 }
 
 .upperP2 {
+  font-size: 1.5em;
   z-index: 9;
   position: absolute;
   top: 43vh;
@@ -125,7 +127,7 @@ h1 {
   font-size: 9vh;
   background-color: #1E2422;
   width: 70vh;
-  height: 70vh;
+  height: 65vh;
   border-radius: 50%;
   /* color: #F1FDFF; */
   /* text-shadow: 6px 3px 9px #D131FF; */
@@ -177,16 +179,14 @@ box-sizing: border-box;
 }
 
 #players {
-   display: grid;
-   grid-template-columns: repeat(2, 0.9fr);
-    border: none;
-    font-size: 3vh;
-    font-weight: lighter;
-    grid-template-rows: 16vh;
-    width: 70vh;
-    height: 13vh;
-    margin: 0 auto;
-    grid-auto-rows: 23.3vh;
+  display: grid;
+  grid-template-columns: repeat(2, 0.9fr);
+   border: none;
+   font-size: 2vh;
+   font-weight: lighter;
+   grid-template-rows: 9vh;
+   width: 70vh;
+   margin: 0 auto;
 }
 
 #form1 {
@@ -248,7 +248,7 @@ button {
 
 /*ALL MEDIA STUFF!!!!!!!!*/
 
-@media (max-width: 650px) {
+@media (max-width: 796px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
