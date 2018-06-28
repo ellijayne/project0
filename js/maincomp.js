@@ -21,6 +21,8 @@ const oPlay = function(index) {
 };
 
 $(document).ready(function() {
+  $(".score1").html(p1score);
+  $(".score2").html(p2score);
 
 $(".resetty").on("click", function() {
   console.log('resetting board');
