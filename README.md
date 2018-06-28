@@ -21,3 +21,4 @@ There are no further:
 - copyright and licensing information (I don't think anyone is going to try and steal this...)
 - known bugs (:pray: :pray: :pray:)
 - credits and acknowledgements (I'd like to thank Joel, John and Google.)
+- Thank you :information_desk_person: :information_desk_person: :information_desk_person:
