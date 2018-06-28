@@ -4,7 +4,7 @@
 This is a very simple Tic-Tac-Toe browser game built using HTML, CSS, JS and jQuery.
 
 ### Operating Instructions
-1. Visit [this site] :point_left: (http://ellijayne.github.io/project0)
+1. Visit [this site] (http://ellijayne.github.io/project0)  :point_left:
 2. The page automatically loads the two player mode so if you are playing solo click the link under the logo.
 3. Click either the Player 1 or Player 2 button and enter your name.
 4. If your name is :fire: it's your turn! Click a box on the game board to place your X or O.
