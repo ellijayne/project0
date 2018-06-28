@@ -64,13 +64,15 @@ const playTurn = function(index) {
     }
 
     //MATH RANDOM COMP PLAY!
-    oPlay(Math.floor(Math.random() * 8));
+    // if (nextPlayerX === false && $(board[index]).val() === "") {
+      oPlay(Math.floor(Math.random() * 9));
+
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = true;
-  }
 
+}
   showMove();
 
   if (checkWin("x")) {
@@ -103,7 +105,7 @@ showMove();
   //making the squares clickable!
   $("#0").on("click", function() {
     console.log($("#0"));
-    playTurn("0")
+    playTurn(0);
   });
   $("#1").on("click", function() {
     console.log($("#1"));
