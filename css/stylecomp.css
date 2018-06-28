@@ -81,6 +81,14 @@ h1 {
   text-align: center;
 
 }
+.uppercomp { /*this sits in place of the p2 score stuff when it is unhidden by click function*/
+  visibility: hidden;
+  z-index: 10;
+  position: absolute;
+  top: 43vh;
+  right: 2em;
+  text-shadow: 6px 3px 9px #AA00C7;
+}
 
 .upperP1 {
   z-index: 10;

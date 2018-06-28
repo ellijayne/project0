@@ -167,6 +167,8 @@ showMove();
 $(function() {
   let $form1 = $("#form1");
   let $player1form = $("#player1form");
+  let $player2form = $("#player2form");
+  let $form2 = $("#form2");
   // let $nameInput = $("#input:text");
 
   $form1.show();
@@ -182,6 +184,9 @@ $(function() {
     let newText = $("input:text").val();
     $(".icon1").after('<p>' + newText + '<p>');
     $player1form.hide();
+    $player2form.hide();
+    $form2.hide();
+    $(".icon2").after('<p>TTToemenator</p>');
     // $("#showForm1").hide();
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
@@ -192,9 +197,10 @@ $(function() {
 //ADD NAME OF PLAYER TWO!!!!!!
 
 $(function() {
+  let $form1 = $("#form1");
+  let $player1form = $("#player1form");
   let $form2 = $("#form2");
   let $player2form = $("#player2form");
-  let $nameInput = $("#input:text");
 
   $form2.show();
   $player2form.hide();
@@ -202,13 +208,18 @@ $(function() {
   $("#showForm2").on("click", function() {
     $form2.hide();
     $player2form.show();
-    $("#player2form input:text").focus();
+    $player1form.show();
+    $form1.hide();
+    $("#player1form input:text").focus();
   });
   $player2form.on('submit', function(e){
     e.preventDefault();
-    let newText = $("#player2details").val();
-    $(".icon2").after('<p>' + newText + '<p>');
+    let newP1Text = $("#player1details").val();
+    let newP2Text = $("#player2details").val();
+    $(".icon1").after("<p>" + newP1Text + "<p>")
+    $(".icon2").after('<p>' + newP2Text + '<p>');
     $player2form.hide();
+    $player1form.hide();
   });
 
 }); //end of add name player two function
