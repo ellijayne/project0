@@ -163,6 +163,7 @@ $(function() {
   $("#showForm1").on("click", function() {
     $form1.hide();
     $player1form.show();
+    $("#player1form input:text").focus(); //this puts the curser/focus on the box as soon as you click player button
   });
   $player1form.on('submit', function(e){
     e.preventDefault();
@@ -189,6 +190,7 @@ $(function() {
   $("#showForm2").on("click", function() {
     $form2.hide();
     $player2form.show();
+    $("#player2form input:text").focus();
   });
   $player2form.on('submit', function(e){
     e.preventDefault();

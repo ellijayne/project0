@@ -1,21 +1,46 @@
 # Project 0 <!--heading-->
 ## Tic Tac Toe <!--subheading-->
+### subheading
 README coming soon. <!--paragraph-->
 
-CUT FROM BUTTON THING
-<div class="nestedPlayer2">
-  <div class="icon2">
-    <i class="far fa-user"></i>
-    <i class="far fa-user"></i>
-  </div>
-    Player Two: <input class="player2Details" type="text" />
-    <button class="player2button">let's play!</button>
-</div>
+ ***Lorem*** **ipsum** *dolor* sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <!--asterix makes things itallic, two sets make it bold and three make it bold and italic -->
 
-HTML
-<!--need to create boxes-->
-<!--need to find images that represent the x and o-->
-<!--or instead of images could get font and then when people input either x or o to an input field it will generate on the board... probably image is better.....-->
-<!-- start on JS - make something you can work on in the console.... like in bank you created function that rendered so at the end of everything you can render it after the functions run
+ # link to live site
+ http://ellijayne.github.io/project0
 
-<!-- need to think about if you want one function
+
+ <a href="http://ellijayne.github.io/project0">My site</a> this wont always work
+
+ [here is the live site](http://ellijayne.github.io/project0) this will usually work better than using the html
+
+ ![alt text](http://fillmurray.com/80/70)
+
+
+ ## lists
+ numbered
+
+ 1. another
+ 2. way
+ 3. to do a list.
+
+
+bullets
+
+- hello
+- lists
+
+
+another lot of bullets
+* more
+* list options
+
+The `<blink>` tag is deprecated
+
+the `alert` function is not a good idea.
+
+``` js
+const hello = function() {
+  console.log('hey girl');
+}
+```
+<!--if you put js after the first three backticks it'ss change the colours in your code to fit that language-->
