@@ -7,6 +7,8 @@ let board = ["", "", "",
 
 let nextPlayerX = true;
 let turnsPlayed = 0;
+let p1score = 0;
+let p2score = 0;
 
 
 
@@ -19,6 +21,8 @@ const oPlay = function(index) {
 };
 
 $(document).ready(function() {
+  $(".score1").html(p1score);
+  $(".score2").html(p2score);
 
 $(".resetty").on("click", function() {
   console.log('resetting board');
@@ -69,6 +73,14 @@ const playTurn = function(index) {
   }
 
   showMove();
+
+  if (checkWin("x")) {
+    $(".score1").html(p1score = p1score + 1);
+  } else if (checkWin("o")){
+    $(".score2").html(p2score = p2score + 1);
+  } else {
+    return;
+  }
 
   if (checkWin("o") || checkWin("x")) { //calling the function here so no longer need to call it above
     $('.nestedPlayer1, .nestedPlayer2').toggleClass('playerInPlay');

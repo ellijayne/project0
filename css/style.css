@@ -76,6 +76,28 @@ h1 {
   padding-bottom: 0;
 }
 
+.upperP1, .upperP2 {
+  display: grid;
+  text-align: center;
+
+}
+
+.upperP1 {
+  z-index: 10;
+  position: absolute;
+  top: 43vh;
+  left: 2em;
+  text-shadow: 6px 3px 9px hotpink;
+}
+
+.upperP2 {
+  z-index: 9;
+  position: absolute;
+  top: 43vh;
+  right: 2em;
+  text-shadow: 6px 3px 9px #AA00C7;
+}
+
 .aniWinner, .aniDraw {
   display: grid;
   align-items: center;
@@ -164,20 +186,29 @@ box-sizing: border-box;
 #form2 {
   color: white;
 }
-.playerInPlay,
-.playerInPlay .icon1,
+.playerInPlay {
+  color: white;
+  padding-top: 0;
+}
+
+.playerInPlay .icon1 {
+  color: white;
+text-shadow: 6px 3px 9px hotpink;
+}
 .playerInPlay .icon2 {
-  color: #;
-  text-shadow: 6px 3px 9px #00FFFF;
+  color: white;
+  text-shadow: 6px 3px 9px #AA00C7;
 }
 
 .icon1 {
   color: white;
   font-size: 30px;
+  padding: 0;
 }
 .icon2 {
   color: white;
   font-size: 30px;
+  padding-bottom: -0.5em;
 }
 
 #showForm1:hover, #showForm2:hover {

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="css/style.css"rel="stylesheet" type="text/css"/>
+  <link href="css/stylecomp.css"rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <script src="js/jquery.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/maincomp.js"></script>
   <title>Project 0</title>
 </head>
 <body>
@@ -13,6 +13,16 @@
 
 
   <h1 class="logo"><div class="tic">Tic-</div><div class="tac">Tac-</div><div class="toe">Toe</div></h1>
+
+  <div class="upperP1">
+    <p>P1<br /> Score:</p>
+    <p class="score1"></p>
+  </div>
+  <div class="upperP2">
+    <p>P2<br /> Score:</p>
+    <p class="score2"></p>
+  </div>
+
 
     <div class="grid">
       <!-- <div class="row1"> -->
@@ -23,12 +33,14 @@
       <!--end of row 1 div-->
 
       <!-- <div class="row2"> -->
+
           <div class="aniWinner">
             <p>We have a winner!<break><button id="resetBoard" class=" resetty">Reset</button></break></p>
           </div>
           <div class="aniDraw">
             <p>It's a draw!<break><button id="resetBoard" class=" resetty">Reset</button></break></p>
           </div>
+
           <div class="gridBox" id="3"></div>
           <div class="gridBox" id="4"></div>
           <div class="gridBox" id="5"></div>
@@ -41,6 +53,7 @@
           <div class="gridBox" id="8"></div>
           <!--nesting players  within main grid-->
       </div> <!--end of grid div-->
+
       <div class="lowerGrid">
           <!-- <div class="winnerGrid" id="winnerMessage">
               <p>We have a winner!</p>
