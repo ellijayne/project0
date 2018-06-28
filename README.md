@@ -1,46 +1,23 @@
-# Project 0 <!--heading-->
-## Tic Tac Toe <!--subheading-->
-### subheading
-README coming soon. <!--paragraph-->
+# Project 0
+## Simple Tic-Tac-Toe game
 
- ***Lorem*** **ipsum** *dolor* sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <!--asterix makes things itallic, two sets make it bold and three make it bold and italic -->
+This is a very simple Tic-Tac-Toe browser game built using HTML, CSS, JS and jQuery.
 
- # link to live site
- http://ellijayne.github.io/project0
+### Operating Instructions
+1. Visit [this site] :point_left: (http://ellijayne.github.io/project0)
+2. The page automatically loads the two player mode so if you are playing solo click the link under the logo.
+3. Click either the Player 1 or Player 2 button and enter your name.
+4. If your name is :fire: it's your turn! Click a box on the game board to place your X or O.
+5. You win if you get three X's or O's in a row. The score counter's will keep close of who is the biggest Tic-Tac-Toe legend.
+6. Once a game is won or drawn hit the reset button to start again! Play on dudes :metal:
 
+### Further Instructions
 
- <a href="http://ellijayne.github.io/project0">My site</a> this wont always work
+There are no further:
 
- [here is the live site](http://ellijayne.github.io/project0) this will usually work better than using the html
-
- ![alt text](http://fillmurray.com/80/70)
-
-
- ## lists
- numbered
-
- 1. another
- 2. way
- 3. to do a list.
-
-
-bullets
-
-- hello
-- lists
-
-
-another lot of bullets
-* more
-* list options
-
-The `<blink>` tag is deprecated
-
-the `alert` function is not a good idea.
-
-``` js
-const hello = function() {
-  console.log('hey girl');
-}
-```
-<!--if you put js after the first three backticks it'ss change the colours in your code to fit that language-->
+- configuration instructions
+- installation instructions (just load it in the browser)
+- operating instructions
+- copyright and licensing information (I don't think anyone is going to try and steal this...)
+- known bugs (:pray: :pray: :pray:)
+- credits and acknowledgements (I'd like to thank Joel, John and Google.)
