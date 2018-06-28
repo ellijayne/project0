@@ -91,7 +91,7 @@ h1 {
 animation: AnimationName 27s ease infinite;
 box-sizing: border-box;
   margin:0;
-  padding-top: 99px;
+  padding-top: 2.3em;
 }
 
 #resetBoard { /*styling for the grid containng message and button*/
@@ -242,23 +242,20 @@ button {
 
 .aniWinner p, .aniDraw p {
   opacity: 0.98;
-  /* background-color: #07B9C7; */
   margin: 0;
   padding: 0;
   font-size: 3.5vh;
-  /* background-color: #1E2422; */
   width: 60vw;
   height: 60vw;
   border-radius: 50%;
-    /* color: #F1FDFF; */
-    /* text-shadow: 6px 3px 9px #D131FF; */
-    background: linear-gradient(270deg, #7ad8c0, #7ad1d8, #7abcd8, #7a7ed8, #b07ad8, #e79fdc);
-    -webkit-animation: AnimationName 27s ease infinite;
+  background:
+  linear-gradient(270deg, #7ad8c0, #7ad1d8, #7abcd8, #7a7ed8, #b07ad8, #e79fdc);
+  -webkit-animation: AnimationName 27s ease infinite;
   -moz-animation: AnimationName 27s ease infinite;
   animation: AnimationName 27s ease infinite;
   box-sizing: border-box;
   margin:0;
-  padding-top: 70px;
+  padding-top: 2.6em;
   }
 
 
