@@ -1,13 +1,3 @@
-/* * {
-  border: 1px solid green;
-} */
-
-/*@media screen (max-wdith:) this will help with resizing the screen, look into it */
-
-/* @import url('https://fonts.googleapis.com/css?family=Amatic+SC'); */ /*hand written original font, font fam should be 'Amatic SC', cursive; */
-
-/* @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One'); */ /*this is GLOW one */
-
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 
 body {

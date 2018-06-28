@@ -1,13 +1,3 @@
-/* * {
-  border: 1px solid green;
-} */
-
-/*@media screen (max-wdith:) this will help with resizing the screen, look into it */
-
-/* @import url('https://fonts.googleapis.com/css?family=Amatic+SC'); */ /*hand written original font, font fam should be 'Amatic SC', cursive; */
-
-/* @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One'); */ /*this is GLOW one */
-
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 
 body {
@@ -58,10 +48,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 3;
-  width: 70vh; /*vw: hundredths of the viewport height*/
+  width: 70vh;
   height: 68vh;
   margin: 0 auto; /*this stops the boxes on the grid from expanding when text is input*/
-  grid-auto-rows: 21.3vh; /* 160px;*/ /*stopping the expansion*/
+  grid-auto-rows: 21.3vh;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -70,7 +60,7 @@ h1 {
 
 .gridBox {
   align-items: center;
-  margin: 0; /*this seems to keep all boxes inthe middle of the screen??*/
+  margin: 0;
   font-size: 13vh;
   text-shadow: 6px 3px 9px #00FFFF;
   padding: 0;
@@ -93,7 +83,7 @@ h1 {
   font-size: 1.5em;
   z-index: 10;
   position: absolute;
-  top: 43vh;
+  top: 44vh;
   left: 2em;
   text-shadow: 6px 3px 9px hotpink;
 }
@@ -133,14 +123,12 @@ h1 {
   /* text-shadow: 6px 3px 9px #D131FF; */
   background: linear-gradient(270deg, #7ad8c0, #7ad1d8, #7abcd8, #7a7ed8, #b07ad8, #e79fdc);
   -webkit-animation: AnimationName 27s ease infinite;
--moz-animation: AnimationName 27s ease infinite;
-animation: AnimationName 27s ease infinite;
-box-sizing: border-box;
+  -moz-animation: AnimationName 27s ease infinite;
+  animation: AnimationName 27s ease infinite;
+  box-sizing: border-box;
   margin:0;
   padding-top: 2.3em;
 }
-
-
 
 #resetBoard { /*styling for the grid containng message and button*/
   display: grid;
@@ -148,11 +136,6 @@ box-sizing: border-box;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-start: 2;
-
-   /* grid-template-columns: 1, 0.9fr;
-   grid-template-rows: 16vh;
-   width: 13vh;
-   height: 5vh;*/
    margin: 0 auto;
    padding: 0;
    grid-auto-rows: 23.3vh;
@@ -168,8 +151,6 @@ box-sizing: border-box;
   color: white;
   font-family: 'Monoton', cursive;
   font-weight: 100;
-
-
 }
 
 .resetty:hover {
@@ -226,16 +207,6 @@ text-shadow: 6px 3px 9px hotpink;
   transition: 0.5s;
 }
 
-/* #oneUser {
-  color: #07B9C7;
-  text-shadow: 4px 2px 9px #FFF2BB;
-}
-
-#twoUsers {
-  color: #07B9C7;
-  text-shadow: 4px 2px 9px #FFF2BB;
-} */
-
 button {
   font-size: 3vh;
   border: 2px solid white;
@@ -261,7 +232,7 @@ button {
 }
 .gridBox {
   align-items: center;
-  margin: 0; /*this seems to keep all boxes inthe middle of the screen??*/
+  margin: 0;
   font-size: 15vw;
   padding: 0;
   border: 3px solid white;

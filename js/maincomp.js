@@ -168,7 +168,6 @@ showMove();
 $(function() {
   let $form1 = $("#form1");
   let $player1form = $("#player1form");
-  // let $nameInput = $("#input:text");
 
   $form1.show();
   $player1form.hide();
@@ -182,6 +181,7 @@ $(function() {
     e.preventDefault();
     let newText = $("input:text").val();
     $(".icon1").after('<p>' + newText + '<p>');
+    $(".myName").text($("input:text").val());
     $player1form.hide();
     $(".icon2").after("<p>TTToemenator<p>")
     // $("#showForm1").hide();

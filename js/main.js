@@ -168,6 +168,7 @@ $(function() {
     e.preventDefault();
     let newText = $("input:text").val();
     $(".icon1").after('<p>' + newText + '<p>');
+    $(".p1Name").text($("#player1form input:text").val());
     $player1form.hide();
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
@@ -194,6 +195,7 @@ $(function() {
     e.preventDefault();
     let newText = $("#player2details").val();
     $(".icon2").after('<p>' + newText + '<p>');
+    $(".p2Name").text($("#player2form input:text").val());
     $player2form.hide();
   });
 
