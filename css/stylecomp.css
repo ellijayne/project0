@@ -1,0 +1,314 @@
+/* * {
+  border: 1px solid green;
+} */
+
+/*@media screen (max-wdith:) this will help with resizing the screen, look into it */
+
+/* @import url('https://fonts.googleapis.com/css?family=Amatic+SC'); */ /*hand written original font, font fam should be 'Amatic SC', cursive; */
+
+/* @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One'); */ /*this is GLOW one */
+
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(data:image/png;base64,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);
+  background-color: black;
+  color: white;
+  font-family: 'Monoton', cursive;
+}
+
+.logo {
+  display:inline-flex;
+}
+h1 {
+  font-size: 11.5vh;
+  margin-bottom: -5px;
+  margin-top: -10px;
+  color: #F1FDFF;
+}
+
+.tic {
+  text-shadow: 6px 3px 9px hotpink;
+}
+
+.tac {
+  text-shadow: 6px 3px 9px #00FFFF;
+}
+
+.toe {
+  text-shadow: 6px 3px 9px #AA00C7;
+}
+
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3;
+  width: 70vh; /*vw: hundredths of the viewport height*/
+  height: 70vh;
+  margin: 0 auto; /*this stops the boxes on the grid from expanding when text is input*/
+  grid-auto-rows: 23.3vh; /* 160px;*/ /*stopping the expansion*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 0;
+}
+
+.gridBox {
+  align-items: center;
+  margin: 0; /*this seems to keep all boxes inthe middle of the screen??*/
+  font-size: 15vh;
+  text-shadow: 6px 3px 9px #00FFFF;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid white;
+  border-style: double;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.upperP1, .upperP2 {
+  display: grid;
+  text-align: center;
+
+}
+
+.upperP1 {
+  z-index: 10;
+  position: absolute;
+  top: 43vh;
+  left: 2em;
+  text-shadow: 6px 3px 9px hotpink;
+}
+
+.upperP2 {
+  z-index: 9;
+  position: absolute;
+  top: 43vh;
+  right: 2em;
+  text-shadow: 6px 3px 9px #AA00C7;
+}
+
+.aniWinner, .aniDraw {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1;
+  grid-template-rows: 3;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position:absolute;
+  z-index: 2;
+  /* width: 70vh;
+  height: 70vh; */
+  margin: 0;
+}
+
+.aniWinner p, .aniDraw p {
+  opacity: 0.98;
+  font-size: 10vh;
+  background-color: #1E2422;
+  width: 70vh;
+  height: 70vh;
+  border-radius: 50%;
+  /* color: #F1FDFF; */
+  /* text-shadow: 6px 3px 9px #D131FF; */
+  background: linear-gradient(270deg, #7ad8c0, #7ad1d8, #7abcd8, #7a7ed8, #b07ad8, #e79fdc);
+  -webkit-animation: AnimationName 27s ease infinite;
+-moz-animation: AnimationName 27s ease infinite;
+animation: AnimationName 27s ease infinite;
+box-sizing: border-box;
+  margin:0;
+  padding-top: 2.3em;
+}
+
+#resetBoard { /*styling for the grid containng message and button*/
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-start: 2;
+
+   /* grid-template-columns: 1, 0.9fr;
+   grid-template-rows: 16vh;
+   width: 13vh;
+   height: 5vh;*/
+   margin: 0 auto;
+   padding: 0;
+   grid-auto-rows: 23.3vh;
+}
+
+.resetty { /* styling for the actual button*/
+  font-size: 3vh;
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 5vh;
+  padding: 0.6em;
+  background: transparent;
+  color: white;
+  font-family: 'Monoton', cursive;
+  font-weight: 100;
+
+
+}
+
+.resetty:hover {
+  background: white;
+  color: #7ad1d8;
+  transition: 0.5s;
+}
+
+#players {
+   display: grid;
+   grid-template-columns: repeat(2, 0.9fr);
+    border: none;
+    font-size: 3vh;
+    font-weight: lighter;
+    grid-template-rows: 16vh;
+    width: 70vh;
+    height: 13vh;
+    margin: 0 auto;
+    grid-auto-rows: 23.3vh;
+}
+
+#form1 {
+  color: white;
+}
+#form2 {
+  color: white;
+}
+.playerInPlay {
+  color: white;
+  padding-top: 0;
+}
+
+.playerInPlay .icon1 {
+  color: white;
+text-shadow: 6px 3px 9px hotpink;
+}
+.playerInPlay .icon2 {
+  color: white;
+  text-shadow: 6px 3px 9px #AA00C7;
+}
+
+.icon1 {
+  color: white;
+  font-size: 30px;
+  padding: 0;
+}
+.icon2 {
+  color: white;
+  font-size: 30px;
+  padding-bottom: -0.5em;
+}
+
+#showForm1:hover, #showForm2:hover {
+  background: white;
+  color: #7ad1d8;
+  transition: 0.5s;
+}
+
+/* #oneUser {
+  color: #07B9C7;
+  text-shadow: 4px 2px 9px #FFF2BB;
+}
+
+#twoUsers {
+  color: #07B9C7;
+  text-shadow: 4px 2px 9px #FFF2BB;
+} */
+
+button {
+  font-size: 3vh;
+  border: 2px solid white;
+  border-radius: 10px;
+  /* height: 2.5vh; */
+  background: transparent;
+  color: white;
+  font-family: 'Monoton', cursive;
+}
+
+/*ALL MEDIA STUFF!!!!!!!!*/
+
+@media (max-width: 500px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3;
+    width: 65vw;
+    height: 65vw;
+    margin: 0 auto;
+    grid-auto-rows: 21.3vw;
+    padding-bottom: 0;
+}
+.gridBox {
+  align-items: center;
+  margin: 0; /*this seems to keep all boxes inthe middle of the screen??*/
+  font-size: 15vw;
+  padding: 0;
+  border: 3px solid white;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+#players {
+   display: grid;
+   grid-template-columns: repeat(2, 0.9fr);
+    border: none;
+    font-size: 3vw;
+    grid-template-rows: 16vh;
+    width: 75vw;
+    height: 13vw;
+    margin: 0 auto;
+    grid-auto-rows: 23.3vw;
+}
+.aniWinner, .aniDraw {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1;
+  grid-template-rows: 3;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position:absolute;
+  z-index: 1;
+  width: 65vw;
+  height: 65vw;
+  margin: 0;
+}
+
+.aniWinner p, .aniDraw p {
+  opacity: 0.98;
+  margin: 0;
+  padding: 0;
+  font-size: 3.5vh;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background:
+  linear-gradient(270deg, #7ad8c0, #7ad1d8, #7abcd8, #7a7ed8, #b07ad8, #e79fdc);
+  -webkit-animation: AnimationName 27s ease infinite;
+  -moz-animation: AnimationName 27s ease infinite;
+  animation: AnimationName 27s ease infinite;
+  box-sizing: border-box;
+  margin:0;
+  padding-top: 2.6em;
+  }
+
+h1 {
+    font-size: 7vh;
+    margin-bottom: 7px;
+    margin-top: 0;
+    color: #F1FDFF;
+    text-shadow: 6px 3px 9px #00FFFF;
+
+}
+}
