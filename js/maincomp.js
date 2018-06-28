@@ -183,6 +183,7 @@ $(function() {
     let newText = $("input:text").val();
     $(".icon1").after('<p>' + newText + '<p>');
     $player1form.hide();
+    $(".icon2").after("<p>TTToemenator<p>")
     // $("#showForm1").hide();
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
@@ -190,26 +191,3 @@ $(function() {
   });
 
 }); //end of add name player one function
-//ADD NAME OF PLAYER TWO!!!!!!
-
-$(function() {
-  let $form2 = $("#form2");
-  let $player2form = $("#player2form");
-  let $nameInput = $("#input:text");
-
-  $form2.show();
-  $player2form.hide();
-
-  $("#showForm2").on("click", function() {
-    $form2.hide();
-    $player2form.show();
-    $("#player2form input:text").focus();
-  });
-  $player2form.on('submit', function(e){
-    e.preventDefault();
-    let newText = $("#player2details").val();
-    $(".icon2").after('<p>' + newText + '<p>');
-    $player2form.hide();
-  });
-
-}); //end of add name player two function
