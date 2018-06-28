@@ -1,5 +1,4 @@
-
-//NOTE could do start button when page first loads and when you click start the stuar button goes away and the grid for the game animates into view.
+//TWO PLAYER GAME
 
 let board = ["", "", "",
               "", "", "",
@@ -24,6 +23,7 @@ $(document).ready(function() {
   $(".score1").html(p1score);
   $(".score2").html(p2score);
 
+//RESET BOARD FUNCTION
 $(".resetty").on("click", function() {
   console.log('resetting board');
   board = ["", "", "",
@@ -31,7 +31,7 @@ $(".resetty").on("click", function() {
                 "", "", ""];
   turnsPlayed = 0;
   $('.gridBox').text('');
-  // $("#winnerMessage").hide();
+
   $(".aniWinner").hide();
   $(".aniDraw").hide()
   $("#resetBoard").hide();
@@ -40,13 +40,13 @@ $(".resetty").on("click", function() {
   nextPlayerX = true;
 
   });
-
+//here if the length is NOT 0 it will return and we can't put another x or o in there now.
 const playTurn = function(index) {
-  // debugger; //type debugger whenever you want to see it all in the browers step by step....
   if (board[index].length !== 0 || checkWin("o") || checkWin('x')) {
-     console.log("game over"); //here if the length is NOT 0 it will return and we can't put another x or o in there now.
+     console.log("game over");
     return
   };
+
   if (nextPlayerX === true ) {
     $(".nestedPlayer1").removeClass("playerInPlay");
     $(".nestedPlayer2").addClass("playerInPlay");
@@ -62,14 +62,13 @@ const playTurn = function(index) {
       $(".nestedPlayer2").addClass("playerInPlay");
 
     }
-  } else {
-    oPlay(index);
+
+    //MATH RANDOM COMP PLAY!
+    oPlay(Math.floor(Math.random() * 8));
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = true;
-
-     // checkWin("o"); //calling this below so no longer need to here.
   }
 
   showMove();
@@ -167,8 +166,6 @@ showMove();
 $(function() {
   let $form1 = $("#form1");
   let $player1form = $("#player1form");
-  let $player2form = $("#player2form");
-  let $form2 = $("#form2");
   // let $nameInput = $("#input:text");
 
   $form1.show();
@@ -184,9 +181,6 @@ $(function() {
     let newText = $("input:text").val();
     $(".icon1").after('<p>' + newText + '<p>');
     $player1form.hide();
-    $player2form.hide();
-    $form2.hide();
-    $(".icon2").after('<p>TTToemenator</p>');
     // $("#showForm1").hide();
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
@@ -197,10 +191,9 @@ $(function() {
 //ADD NAME OF PLAYER TWO!!!!!!
 
 $(function() {
-  let $form1 = $("#form1");
-  let $player1form = $("#player1form");
   let $form2 = $("#form2");
   let $player2form = $("#player2form");
+  let $nameInput = $("#input:text");
 
   $form2.show();
   $player2form.hide();
@@ -208,18 +201,13 @@ $(function() {
   $("#showForm2").on("click", function() {
     $form2.hide();
     $player2form.show();
-    $player1form.show();
-    $form1.hide();
-    $("#player1form input:text").focus();
+    $("#player2form input:text").focus();
   });
   $player2form.on('submit', function(e){
     e.preventDefault();
-    let newP1Text = $("#player1details").val();
-    let newP2Text = $("#player2details").val();
-    $(".icon1").after("<p>" + newP1Text + "<p>")
-    $(".icon2").after('<p>' + newP2Text + '<p>');
+    let newText = $("#player2details").val();
+    $(".icon2").after('<p>' + newText + '<p>');
     $player2form.hide();
-    $player1form.hide();
   });
 
 }); //end of add name player two function

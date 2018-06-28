@@ -1,5 +1,4 @@
-
-//NOTE could do start button when page first loads and when you click start the stuar button goes away and the grid for the game animates into view.
+//TWO PLAYER GAME
 
 let board = ["", "", "",
               "", "", "",
@@ -24,6 +23,7 @@ $(document).ready(function() {
   $(".score1").html(p1score);
   $(".score2").html(p2score);
 
+//RESET BOARD FUNCTION
 $(".resetty").on("click", function() {
   console.log('resetting board');
   board = ["", "", "",
@@ -31,7 +31,6 @@ $(".resetty").on("click", function() {
                 "", "", ""];
   turnsPlayed = 0;
   $('.gridBox').text('');
-  // $("#winnerMessage").hide();
   $(".aniWinner").hide();
   $(".aniDraw").hide()
   $("#resetBoard").hide();
@@ -40,20 +39,20 @@ $(".resetty").on("click", function() {
   nextPlayerX = true;
 
   });
-
+//here if the length is NOT 0 it will return and we can't put another x or o in there now.
 const playTurn = function(index) {
-  // debugger; //type debugger whenever you want to see it all in the browers step by step....
   if (board[index].length !== 0 || checkWin("o") || checkWin('x')) {
-     console.log("game over"); //here if the length is NOT 0 it will return and we can't put another x or o in there now.
+     console.log("game over");
     return
   };
+
   if (nextPlayerX === true ) {
     $(".nestedPlayer1").removeClass("playerInPlay");
     $(".nestedPlayer2").addClass("playerInPlay");
     xPlay(index);
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = false;
-    // checkWin("x"); //calling this below so no longer need to here.
+    //
     if(turnsPlayed === 9 && (checkWin('x') !== true)) {
       $(".aniDraw").slideDown(700);
       $("#resetBoard").show();
@@ -68,8 +67,6 @@ const playTurn = function(index) {
     $(".nestedPlayer1").addClass("playerInPlay");
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = true;
-
-     // checkWin("o"); //calling this below so no longer need to here.
   }
 
   showMove();
@@ -82,14 +79,12 @@ const playTurn = function(index) {
     return;
   }
 
-  if (checkWin("o") || checkWin("x")) { //calling the function here so no longer need to call it above
+  if (checkWin("o") || checkWin("x")) {
     $('.nestedPlayer1, .nestedPlayer2').toggleClass('playerInPlay');
-    // console.log('toggle');
   };
-
 };
 
-//render function to take everything in board and put them onto the screen. sending them through to the grid...............
+//render function to put everything on screen
 const showMove = function() {
 for (let i = 0; i < board.length; i++) { //looping through board ARRAY
   $("#" + i).text(board[i]); //updating board class with results stored in LOOP.
@@ -97,10 +92,9 @@ for (let i = 0; i < board.length; i++) { //looping through board ARRAY
 };
 showMove();
 
-// $(document).ready(function() {
-  // $("#winnerMessage").hide();
   $(".aniWinner").hide();
   $(".aniDraw").hide();
+
   //making the squares clickable!
   $("#0").on("click", function() {
     console.log($("#0"));
@@ -139,7 +133,8 @@ showMove();
     playTurn(8);
   });
 
-}); //END of document function tag NOW.
+}); //END of document function tag
+
   const checkWin = function(player) {
 
   if ((board[0] === player && board[1] === player  && board[2] === player) ||
@@ -150,24 +145,16 @@ showMove();
   (board[0] === player && board[3] === player && board[6] === player) ||
   (board[1] === player && board[4] === player && board[7] === player) ||
   (board[2] === player && board[5] === player && board[8] === player)) {
-    // $("#winnerMessage").show();
     $(".aniWinner").slideDown(700);
     $("#resetBoard").show();
-
-
-
-        console.log('we have a winner');
-
         return true;
   }
-
-    };
+};
 
 //ADD NAME OF PLAYER ONE FUNCTION!!!
 $(function() {
   let $form1 = $("#form1");
   let $player1form = $("#player1form");
-  // let $nameInput = $("#input:text");
 
   $form1.show();
   $player1form.hide();
@@ -182,15 +169,14 @@ $(function() {
     let newText = $("input:text").val();
     $(".icon1").after('<p>' + newText + '<p>');
     $player1form.hide();
-    // $("#showForm1").hide();
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
 
   });
 
 }); //end of add name player one function
-//ADD NAME OF PLAYER TWO!!!!!!
 
+//ADD NAME OF PLAYER TWO!!!!!!
 $(function() {
   let $form2 = $("#form2");
   let $player2form = $("#player2form");
