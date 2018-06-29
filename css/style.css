@@ -16,7 +16,6 @@ display:inline-flex;
 }
 
 h1 {
-
   font-size: 11.5vh;
   margin-bottom: -5px;
   margin-top: -10px;
@@ -107,8 +106,6 @@ h1 {
   grid-row-end: 2;
   position:absolute;
   z-index: 2;
-  /* width: 70vh;
-  height: 70vh; */
   margin: 0;
 }
 
@@ -119,8 +116,6 @@ h1 {
   width: 70vh;
   height: 65vh;
   border-radius: 50%;
-  /* color: #F1FDFF; */
-  /* text-shadow: 6px 3px 9px #D131FF; */
   background: linear-gradient(270deg, #7ad8c0, #7ad1d8, #7abcd8, #7a7ed8, #b07ad8, #e79fdc);
   -webkit-animation: AnimationName 27s ease infinite;
   -moz-animation: AnimationName 27s ease infinite;
@@ -211,7 +206,6 @@ button {
   font-size: 3vh;
   border: 2px solid white;
   border-radius: 10px;
-  /* height: 2.5vh; */
   background: transparent;
   color: white;
   font-family: 'Monoton', cursive;
@@ -247,15 +241,15 @@ button {
   visibility: hidden;
 }
 #players {
-   display: grid;
-   grid-template-columns: repeat(2, 0.9fr);
-    border: none;
-    font-size: 3vw;
-    grid-template-rows: 16vh;
-    width: 75vw;
-    height: 13vw;
-    margin: 0 auto;
-    grid-auto-rows: 23.3vw;
+  display: grid;
+  grid-template-columns: repeat(2, 0.9fr);
+  border: none;
+  font-size: 3vw;
+  grid-template-rows: 16vh;
+  width: 75vw;
+  height: 13vw;
+  margin: 0 auto;
+  grid-auto-rows: 23.3vw;
 }
 .aniWinner, .aniDraw {
   display: grid;
@@ -296,6 +290,5 @@ h1 {
     margin-top: 0;
     color: #F1FDFF;
     text-shadow: 6px 3px 9px #00FFFF;
-
 }
 }

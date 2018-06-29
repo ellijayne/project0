@@ -10,9 +10,9 @@ let p1score = 0;
 let p2score = 0;
 
 
-
+//here we are setting the value of board at position index to be X
 const xPlay = function(index) {
-  board[index] = "x"; //here we are setting the value of board at position index to be X
+  board[index] = "x";
 };
 
 const oPlay = function(index) {

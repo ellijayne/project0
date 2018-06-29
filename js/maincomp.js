@@ -9,10 +9,21 @@ let turnsPlayed = 0;
 let p1score = 0;
 let p2score = 0;
 
+//function to pull the empty spots from my board length w/ conditional to push if spot is empty.
+let findEmpty = function () {
+  let newBoard = [];
+  for (let i = 0; i < board.length; i++) {
+    if (board[i] === "") {
+      newBoard.push(i);
+    }
+  }
 
+  return newBoard;
+}
 
+//here we are setting the value of board at position index to be X
 const xPlay = function(index) {
-  board[index] = "x"; //here we are setting the value of board at position index to be X
+  board[index] = "x";
 };
 
 const oPlay = function(index) {
@@ -53,7 +64,7 @@ const playTurn = function(index) {
     xPlay(index);
     turnsPlayed = turnsPlayed + 1;
     nextPlayerX = false;
-    // checkWin("x"); //calling this below so no longer need to here.
+
     if(turnsPlayed === 9 && (checkWin('x') !== true)) {
       $(".aniDraw").slideDown(700);
       $("#resetBoard").show();
@@ -64,8 +75,13 @@ const playTurn = function(index) {
     }
 
     //MATH RANDOM COMP PLAY!
-    // if (nextPlayerX === false && $(board[index]).val() === "") {
-      oPlay(Math.floor(Math.random() * 9));
+    const newBoard = findEmpty();
+    //creating a variable to store random move.
+      let randomNumber = Math.floor(Math.random() * (newBoard.length));
+      //storing the result of the above method in a variable.
+      let randomSpot = newBoard[randomNumber];
+      //calling above variable within oplay function.
+      oPlay(randomSpot);
 
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
@@ -75,6 +91,7 @@ const playTurn = function(index) {
 }
   showMove();
 
+
   if (checkWin("x")) {
     $(".score1").html(p1score = p1score + 1);
   } else if (checkWin("o")){
@@ -83,14 +100,14 @@ const playTurn = function(index) {
     return;
   }
 
-  if (checkWin("o") || checkWin("x")) { //calling the function here so no longer need to call it above
+  if (checkWin("o") || checkWin("x")) {
     $('.nestedPlayer1, .nestedPlayer2').toggleClass('playerInPlay');
-    // console.log('toggle');
+
   };
 
 };
 
-//render function to take everything in board and put them onto the screen. sending them through to the grid...............
+//render results to screen sending through to the grid.
 const showMove = function() {
 for (let i = 0; i < board.length; i++) { //looping through board ARRAY
   $("#" + i).text(board[i]); //updating board class with results stored in LOOP.
@@ -98,10 +115,11 @@ for (let i = 0; i < board.length; i++) { //looping through board ARRAY
 };
 showMove();
 
-// $(document).ready(function() {
-  // $("#winnerMessage").hide();
+//hiding winner and draw messages.
   $(".aniWinner").hide();
   $(".aniDraw").hide();
+
+
   //making the squares clickable!
   $("#0").on("click", function() {
     console.log($("#0"));
@@ -141,6 +159,7 @@ showMove();
   });
 
 }); //END of document function tag NOW.
+
   const checkWin = function(player) {
 
   if ((board[0] === player && board[1] === player  && board[2] === player) ||
@@ -151,18 +170,14 @@ showMove();
   (board[0] === player && board[3] === player && board[6] === player) ||
   (board[1] === player && board[4] === player && board[7] === player) ||
   (board[2] === player && board[5] === player && board[8] === player)) {
-    // $("#winnerMessage").show();
+
     $(".aniWinner").slideDown(700);
     $("#resetBoard").show();
-
-
-
-        console.log('we have a winner');
 
         return true;
   }
 
-    };
+};
 
 //ADD NAME OF PLAYER ONE FUNCTION!!!
 $(function() {
@@ -184,7 +199,6 @@ $(function() {
     $(".myName").text($("input:text").val());
     $player1form.hide();
     $(".icon2").after("<p>TTToemenator<p>")
-    // $("#showForm1").hide();
     $(".nestedPlayer2").removeClass("playerInPlay");
     $(".nestedPlayer1").addClass("playerInPlay");
 
