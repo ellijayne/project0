@@ -212,6 +212,10 @@ button {
 }
 
 /*ALL MEDIA STUFF!!!!!!!!*/
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
 
 @media (max-width: 796px) {
   .grid {
@@ -293,7 +297,7 @@ h1 {
 }
 }
 
-@media only screen and (max-width: 320px) {
+@media screen and (max-width:320px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
