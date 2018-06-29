@@ -226,27 +226,26 @@ button {
 }
 
 /*ALL MEDIA STUFF!!!!!!!!*/
-
 @viewport {
   width: device-width ;
   zoom: 1.0 ;
 }
 
-@media (max-width: 981px) {
+@media (max-width: 796px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 3;
-    width: 65vh;
-    height: 65vh;
+    width: 65vw;
+    height: 65vw;
     margin: 0 auto;
-    grid-auto-rows: 21.3vh;
+    grid-auto-rows: 21.3vw;
     padding-bottom: 0;
 }
 .gridBox {
   align-items: center;
   margin: 0;
-  font-size: 10vw;
+  font-size: 15vw;
   padding: 0;
   border: 3px solid white;
   overflow: hidden;
@@ -260,15 +259,15 @@ button {
   visibility: hidden;
 }
 #players {
-   display: grid;
-   grid-template-columns: repeat(2, 0.9fr);
-    border: none;
-    font-size: 3vw;
-    grid-template-rows: 12vh;
-    width: 65vw;
-    height: 10vw;
-    margin: 0 auto;
-    grid-auto-rows: 20.3vw;
+  display: grid;
+  grid-template-columns: repeat(2, 0.9fr);
+  border: none;
+  font-size: 3.5vw;
+  grid-template-rows: 16vh;
+  width: 75vw;
+  height: 13vw;
+  margin: 0 auto;
+  grid-auto-rows: 23.3vw;
 }
 .aniWinner, .aniDraw {
   display: grid;
@@ -289,7 +288,7 @@ button {
   opacity: 0.98;
   margin: 0;
   padding: 0;
-  font-size: 3.5vh;
+  font-size: 7.5vw;
   width: 60vw;
   height: 60vw;
   border-radius: 50%;
@@ -311,6 +310,88 @@ h1 {
     text-shadow: 6px 3px 9px #00FFFF;
 }
 }
+
+@media screen and (min-width:456px) and (max-width:778px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3;
+    width: 65vw;
+    height: 65vw;
+    margin: 0 auto;
+    grid-auto-rows: 21.3vw;
+    padding-bottom: 0;
+}
+.gridBox {
+  align-items: center;
+  margin: 0;
+  font-size: 15vw;
+  padding: 0;
+  border: 3px solid white;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+.upperP1 {
+  visibility: hidden;
+}
+
+.upperP2 {
+  visibility: hidden;
+}
+#players {
+  display: grid;
+  grid-template-columns: repeat(2, 0.9fr);
+  border: none;
+  font-size: 4vh;
+  grid-template-rows: 16vh;
+  width: 75vw;
+  height: 13vw;
+  margin: 0 auto;
+  grid-auto-rows: 23.3vw;
+}
+.aniWinner, .aniDraw {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1;
+  grid-template-rows: 3;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position:absolute;
+  z-index: 1;
+  width: 65vw;
+  height: 65vw;
+  margin: 0;
+}
+
+.aniWinner p, .aniDraw p {
+  opacity: 0.98;
+  margin: 0;
+  padding: 0;
+  font-size: 7vw;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background:
+  linear-gradient(270deg, #7ad8c0, #7ad1d8, #7abcd8, #7a7ed8, #b07ad8, #e79fdc);
+  -webkit-animation: AnimationName 27s ease infinite;
+  -moz-animation: AnimationName 27s ease infinite;
+  animation: AnimationName 27s ease infinite;
+  box-sizing: border-box;
+  margin:0;
+  padding-top: 2.6em;
+  }
+
+h1 {
+    font-size: 7vh;
+    margin-bottom: 7px;
+    margin-top: 0;
+    color: #F1FDFF;
+    text-shadow: 6px 3px 9px #00FFFF;
+}
+}
+
+
 
 @media screen and (max-width:320px) {
   .grid {
@@ -369,7 +450,7 @@ h1 {
   opacity: 0.98;
   margin: 0;
   padding: 0;
-  font-size: 3.5vh;
+  font-size: 6vw;
   width: 60vw;
   height: 60vw;
   border-radius: 50%;
